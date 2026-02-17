@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <style>
+        .comment{
+            border: 2px solid red;
+            background-color: lightcyan;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+
+          
+
+
+        }
+          #form{
+            display: grid;
+            grid-template-columns: 1 ,1fr;
+            grid-template-rows: 2 ,1fr;
+          }
+
+          #btn-post{
+            padding: 10px;
+            background-color: red;
+            color: blue;
+            font-weight: bold;
+            font-size: 20px;
+          }
+    </style>
+</head>
+<body>
+<h1>
+    My Awesome comment Box  . Write in your Mind  !!!
+</h1>
+<section>
+    <h1>All comment here</h1>
+    <div id="comment-container">
+<p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic officia corporis laudantium consequuntur pariatur repellendus nisi eaque, nihil quia harum quo voluptatem quod numquam quas soluta facilis in fugit!</p>
+<p class="comment">Hic pariatur repudiandae quas officiis architecto. Quisquam incidunt eum expedita officia fuga. Veritatis eaque laudantium quos eius suscipit recusandae nobis tempore consequatur quod, repudiandae cupiditate saepe aspernatur modi error ab.</p>
+<p class="comment">Cupiditate alias consectetur necessitatibus magni. Odio earum quasi ex, sit aliquam cumque asperiores unde distinctio praesentium corrupti assumenda in. Impedit omnis tempore ea nobis, alias ullam sed praesentium minima quae!</p>
+    </div>
+    <!-- <form > -->
+
+<div id="form">
+
+    <textarea name="" id="comment-text-box" cols="70" rows="10"></textarea>
+   <br>
+   <br>
+   <button id="btn-post">Post It</button>
+</div>
+
+
+    <!-- </form> -->
+</section>
+<script>
+// Button set step -1 
+    document.getElementById('btn-post')
+    .addEventListener('click',function (){
+// console.log ('Button Clicked')
+
+// step   ami j textarea  te  liksi  seyta k  ami nia asbo 
+
+const  CommentTextBox =  document.getElementById('comment-text-box');
+// console.log(CommentTextBox)
+const newComment = CommentTextBox.value
+console.log(newComment) ;
+// comment kothai publish korba  tar   parrent   k   shoro
+
+C
+// console.log(commentContainer)
+
+// Step 4 : ey comment j korba  tar  jonno p tag create koro
+
+const CommentElement = document.createElement('p')
+
+CommentElement.classList.add('comment');
+
+CommentElement.innerText = newComment ;
+
+//   step : 5 append korte hobe  new tag re 
+
+  commentContainer.appendChild(CommentElement)
+//  step  : 6
+// clean  the text area
+CommentTextBox.value='';
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
